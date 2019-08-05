@@ -17,8 +17,12 @@ class Underscore:
         return new_list
 
     def reject(self, iterable, callback):
-        
-        
+        new_list =[]
+        for x in range(0, len(iterable), 1):
+            if (callback(iterable[x])) == False:
+                new_list.append(iterable[x])
+        return new_list
+
 # you just created a library with 4 methods!
 # let's create an instance of our class
 _ = Underscore() # yes we are setting our instance to a variable that is an underscore
